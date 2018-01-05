@@ -9,6 +9,8 @@ package com.example.coolweather1.util;
         import com.example.coolweather1.db.City;
         import com.example.coolweather1.db.County;
         import com.example.coolweather1.db.province;
+        import com.example.coolweather1.gson.Weather;
+        import com.google.gson.Gson;
 
         import org.json.JSONArray;
         import org.json.JSONException;
@@ -83,10 +85,8 @@ public class Utility {
         return false;
     }
 
-    /**
-     * 将返回的JSON数据解析成Weather实体类
-     */
-    /*public static Weather handleWeatherResponse(String response) {
+
+    public static Weather handleWeatherResponse(String response) {
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
@@ -96,8 +96,9 @@ public class Utility {
             e.printStackTrace();
         }
         return null;
+
+
     }
-*/
 }
 
 
